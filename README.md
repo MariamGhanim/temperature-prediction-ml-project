@@ -1,7 +1,14 @@
 # Temperature Prediction ML Project
 
+![Application Screenshot](appPic.PNG)
+
 ## Overview
-This project implements a machine learning model to predict temperature based on weather conditions using a Random Forest algorithm. The application provides an interactive web interface built with Streamlit for real-time temperature predictions.
+This is a Data Analysis and ML project that implements temperature prediction based on weather conditions. The project features complete data exploration, feature engineering, model comparison, and deployment through an interactive Streamlit web application.
+
+**Key Components:**
+- **Data Analysis**: Comprehensive exploratory data analysis with statistical insights and visualizations
+- **Machine Learning**: Multiple model comparison (Linear Regression, Random Forest, LightGBM) with hyperparameter tuning
+- **Web Application**: Interactive Streamlit interface for real-time temperature predictions
 
 **Note: The weather data used in this project is synthetic and not real-world data.**
 
