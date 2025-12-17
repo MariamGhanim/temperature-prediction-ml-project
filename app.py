@@ -331,6 +331,19 @@ def main():
     
     # Date and time inputs
     season = st.sidebar.selectbox("Season", ["Winter", "Spring", "Summer", "Autumn"], index=1)
+    
+    # Month selection based on season
+    season_months = {
+        "Winter": {"December": 12, "January": 1, "February": 2},
+        "Spring": {"March": 3, "April": 4, "May": 5},
+        "Summer": {"June": 6, "July": 7, "August": 8},
+        "Autumn": {"September": 9, "October": 10, "November": 11}
+    }
+    
+    month_options = list(season_months[season].keys())
+    selected_month = st.sidebar.selectbox(f"{season} Month", month_options)
+    month = season_months[season][selected_month]
+    
     hour = st.sidebar.selectbox("Hour", range(0, 24), index=12)
     
     # Map season to encoded value
@@ -364,7 +377,7 @@ def main():
             # Create feature array (adjust based on your actual features)
             features = np.array([[
                 humidity, wind_speed, visibility, pressure,
-                season_encoded, hour, time_of_day,
+                month, season_encoded, hour, time_of_day,
                 humidity_cat, wind_cat, pressure_cat, visibility_cat
             ]])
             
